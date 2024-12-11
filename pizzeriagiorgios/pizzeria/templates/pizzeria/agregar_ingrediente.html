@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Agregar Ingrediente</title>
+</head>
+<body>
+    <h1>Agregar Ingrediente</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="nombre">Nombre del Ingrediente:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <button type="submit">Agregar</button>
+    </form>
+</body>
+</html>

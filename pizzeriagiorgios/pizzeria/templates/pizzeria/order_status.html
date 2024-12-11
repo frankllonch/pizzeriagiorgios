@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Estado del Pedido</title>
+    <link rel="stylesheet" href="{% static 'css/framework7.css' %}">
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="title">Estado del Pedido</div>
+        </div>
+    </div>
+    <div class="block">
+        <h2>Estado Actual: {{ estado }}</h2>
+        <p>Tu pedido fue realizado el {{ fecha }}.</p>
+        <ul>
+            {% for pizza in pedido.pizzas.all %}
+            <li>{{ pizza.nombre }} - {{ pizza.tamanos }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="block">
+        <button class="button button-fill">Volver al Menú</button>
+    </div>
+    <script src="{% static 'js/framework7.js' %}"></script>
+</body>
+</html>

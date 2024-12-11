@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="{% static 'css/framework7.css' %}">
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="title">Carrito</div>
+        </div>
+    </div>
+    <div class="list simple-list">
+        <ul>
+            {% for item in cart %}
+            <li>
+                {{ item.pizza.nombre }} - {{ item.cantidad }} unidades - {{ item.total }} €
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="footer">
+        <div class="block">
+            <p>Total: {{ total }} €</p>
+            <button class="button button-fill">Proceder al Pago</button>
+        </div>
+    </div>
+    <script src="{% static 'js/framework7.js' %}"></script>
+</body>
+</html>

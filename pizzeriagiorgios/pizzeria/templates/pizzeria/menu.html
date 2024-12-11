@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menú</title>
+    <link rel="stylesheet" href="{% static 'css/framework7.css' %}">
+</head>
+<body>
+    <div class="list">
+        {% for pizza in pizzas %}
+        <div class="item-content">
+            <div class="item-inner">
+                <div class="item-title">{{ pizza.nombre }}</div>
+                <div class="item-after">{{ pizza.precio }} €</div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <script src="{% static 'js/framework7.js' %}"></script>
+</body>
+</html>
